@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sahibinden</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body style="margin:0; font-family:Arial, Helvetica, sans-serif; background:#f5f5f5;">
+    <!-- Header -->
+    <header style="background:#ffdb4d; border-bottom:1px solid #e0c84a;">
+        <div style="max-width:1200px; margin:0 auto; padding:14px 16px; display:flex; align-items:center; gap:16px;">
+            <a href="/" style="font-weight:900; font-size:22px; color:#000; text-decoration:none;">sahibinden.com</a>
+
+            <form method="get" action="/" style="flex:1; display:flex; gap:8px;">
+                <input name="q" value="@Context.Request.Query["q"]"
+                       placeholder="Kelime, ilan no veya mağaza adı ile ara"
+                       style="flex:1; padding:10px; border:1px solid #ccc; border-radius:6px;" />
+                <button type="submit" style="padding:10px 14px; border:0; border-radius:6px; cursor:pointer;">
+                    Ara
+                </button>
+            </form>
+
+            <a href="#" style="text-decoration:none; color:#000; font-weight:700;">Giriş Yap</a>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main style="max-width:1200px; margin:16px auto; padding:0 16px;">
+        @RenderBody()
+    </main>
+
+    <footer style="max-width:1200px; margin:24px auto; padding:0 16px; color:#777; font-size:12px;">
+        © @DateTime.Now.Year sahibinden.com (ödev klonu)
+    </footer>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

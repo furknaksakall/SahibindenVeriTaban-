@@ -1,0 +1,136 @@
+﻿@model List<SahibindenMvc.Models.VwListing>
+
+@{
+    var roots = ViewBag.RootCategories as List<SahibindenMvc.Models.Category>;
+    var all = ViewBag.AllCategories as List<SahibindenMvc.Models.Category>;
+
+    var cities = ViewBag.Cities as List<SahibindenMvc.Models.Location>;
+    var districts = ViewBag.Districts as List<SahibindenMvc.Models.Location>;
+
+    string q = ViewBag.Q as string;
+    int? categoryId = ViewBag.CategoryId as int?;
+    int? cityId = ViewBag.CityId as int?;
+    int? districtId = ViewBag.DistrictId as int?;
+
+    ViewData["Title"] = "Anasayfa";
+}
+
+<div style="display:grid; grid-template-columns:280px 1fr; gap:16px;">
+    <!-- SOL: Kategori -->
+    <aside style="background:#fff; border:1px solid #e5e5e5; border-radius:10px; padding:12px;">
+        <div style="font-weight:800; margin-bottom:10px;">Kategoriler</div>
+
+        @if (roots == null || roots.Count == 0)
+        {
+            <div style="color:#777;">Kategori yok</div>
+        }
+        else
+        {
+            <ul style="list-style:none; padding:0; margin:0;">
+                @foreach (var parent in roots)
+                {
+                    <li style="padding:8px 0; border-bottom:1px solid #f0f0f0;">
+                        <a href="/?categoryId=@parent.CategoryId"
+                           style="text-decoration:none; color:#000; font-weight:800;">
+                            @parent.CategoryName
+                        </a>
+
+                        @{
+                            var children = (all ?? new List<SahibindenMvc.Models.Category>())
+                            .Where(x => x.ParentId == parent.CategoryId)
+                            .ToList();
+                        }
+
+                        @if (children.Count > 0)
+                        {
+                            <ul style="list-style:none; padding-left:14px; margin:8px 0 0 0;">
+                                @foreach (var child in children)
+                                {
+                                    <li style="padding:5px 0;">
+                                        <a href="/?categoryId=@child.CategoryId"
+                                           style="text-decoration:none; color:#0066cc;">
+                                            @child.CategoryName
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        }
+                    </li>
+                }
+            </ul>
+        }
+    </aside>
+
+    <!-- SAĞ: İlanlar -->
+    <section style="background:#fff; border:1px solid #e5e5e5; border-radius:10px; padding:12px;">
+        <div style="font-weight:800; margin-bottom:10px;">İlanlar</div>
+
+        <!-- FİLTRE FORMU -->
+        <form method="get" style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
+            <input name="q" value="@q" placeholder="Başlıkta ara..."
+                   style="padding:10px; border:1px solid #ccc; border-radius:8px; width:260px;" />
+
+            <select name="cityId"
+                    style="padding:10px; border:1px solid #ccc; border-radius:8px;"
+                    onchange="this.form.submit()">
+                <option value="">İl seç</option>
+                @if (cities != null)
+                {
+                    foreach (var c in cities)
+                    {
+                        var sel = (cityId.HasValue && cityId.Value == c.LocationId) ? "selected" : "";
+                        <option value="@c.LocationId" selected="@sel">@c.LocationName</option>
+                    }
+                }
+            </select>
+
+            <select name="districtId" style="padding:10px; border:1px solid #ccc; border-radius:8px;">
+                <option value="">İlçe seç</option>
+                @if (districts != null)
+                {
+                    foreach (var d in districts)
+                    {
+                        var sel = (districtId.HasValue && districtId.Value == d.LocationId) ? "selected" : "";
+                        <option value="@d.LocationId" selected="@sel">@d.LocationName</option>
+                    }
+                }
+            </select>
+
+            @* Seçili kategori kaybolmasın *@
+            @if (categoryId.HasValue)
+            {
+                <input type="hidden" name="categoryId" value="@categoryId.Value" />
+            }
+
+            <button type="submit" style="padding:10px 14px; border:0; border-radius:8px; cursor:pointer;">
+                Filtrele
+            </button>
+        </form>
+
+        @if (Model == null || Model.Count == 0)
+        {
+            <div>İlan bulunamadı.</div>
+        }
+        else
+        {
+            <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px;">
+                @foreach (var item in Model)
+                {
+                    <a href="/ilan/@item.ListingId"
+                       style="display:block; text-decoration:none; color:inherit; border:1px solid #eee; padding:12px; border-radius:10px;">
+                        <div style="font-weight:700;">@item.Title</div>
+                        <div style="margin-top:6px;">@item.Price.ToString("N0") @item.Currency</div>
+
+                        <div style="margin-top:6px; color:#555;">
+                            @item.CityName / @item.DistrictName
+                        </div>
+
+                        <div style="margin-top:6px; font-size:12px; color:#777;">
+                            @item.CreatedAt.ToString("dd.MM.yyyy HH:mm")
+                        </div>
+                    </a>
+                }
+            </div>
+        }
+    </section>
+</div>

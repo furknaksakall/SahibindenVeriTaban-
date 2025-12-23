@@ -1,0 +1,44 @@
+﻿@model SahibindenMvc.Models.Listing
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div style="display:grid; grid-template-columns:1fr 320px; gap:16px;">
+    <!-- Sol: İlan içeriği -->
+    <section style="background:#fff; border:1px solid #e5e5e5; border-radius:10px; padding:14px;">
+        <div style="font-size:22px; font-weight:900;">@Model.Title</div>
+        <div style="margin-top:8px; color:#666;">
+            @Model.Location?.LocationName • @Model.CreatedAt.ToString("dd.MM.yyyy HH:mm")
+        </div>
+
+        <div style="margin-top:12px; font-size:24px; font-weight:900;">
+            @Model.Price.ToString("N0") @Model.Currency
+        </div>
+
+        <hr style="margin:14px 0; border:none; border-top:1px solid #eee;" />
+
+        <div style="white-space:pre-wrap; line-height:1.5;">
+            @Model.Description
+        </div>
+    </section>
+
+    <!-- Sağ: Sahibinden tarzı bilgi kutusu -->
+    <aside style="background:#fff; border:1px solid #e5e5e5; border-radius:10px; padding:14px;">
+        <div style="font-weight:900; margin-bottom:10px;">İlan Bilgileri</div>
+
+        <div style="font-size:14px; color:#444;">
+            <div><b>İlan No:</b> @Model.ListingId</div>
+            <div style="margin-top:6px;"><b>Kategori:</b> @Model.Category?.CategoryName</div>
+            <div style="margin-top:6px;"><b>Konum:</b> @Model.Location?.LocationName</div>
+            <div style="margin-top:6px;"><b>İlan Tarihi:</b> @Model.CreatedAt.ToString("dd.MM.yyyy")</div>
+        </div>
+
+        <hr style="margin:14px 0; border:none; border-top:1px solid #eee;" />
+
+        <div style="font-weight:900; margin-bottom:10px;">Satıcı</div>
+        <div style="font-size:14px;">
+            <div><b>@Model.User?.FullName</b></div>
+            <div style="margin-top:6px; color:#666;">@Model.User?.Phone</div>
+        </div>
+    </aside>
+</div>
