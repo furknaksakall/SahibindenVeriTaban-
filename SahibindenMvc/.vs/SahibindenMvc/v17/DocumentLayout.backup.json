@@ -3,36 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|c:\\users\\aksak\\desktop\\ver\u0130 proje\\sahibindenmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|c:\\users\\aksak\\desktop\\ver\u0130 proje\\sahibindenmvc\\models\\categorycreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|solutionrelative:models\\categorycreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|c:\\users\\aksak\\desktop\\ver\u0130 proje\\sahibindenmvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|c:\\users\\aksak\\desktop\\ver\u0130 proje\\sahibindenmvc\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|solutionrelative:views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|c:\\users\\aksak\\desktop\\ver\u0130 proje\\sahibindenmvc\\data\\sahibindendbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|solutionrelative:data\\sahibindendbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|c:\\users\\aksak\\desktop\\ver\u0130 proje\\sahibindenmvc\\views\\listing\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|solutionrelative:views\\listing\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|c:\\users\\aksak\\desktop\\ver\u0130 proje\\sahibindenmvc\\controllers\\listingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|solutionrelative:controllers\\listingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|c:\\users\\aksak\\desktop\\ver\u0130 proje\\sahibindenmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|c:\\users\\aksak\\desktop\\ver\u0130 proje\\sahibindenmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|c:\\users\\aksak\\desktop\\ver\u0130 proje\\sahibindenmvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|c:\\users\\aksak\\desktop\\ver\u0130 proje\\sahibindenmvc\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|solutionrelative:controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,11 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Views\\Category\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Category\\Create.cshtml",
+              "ToolTip": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Views\\Category\\Create.cshtml",
+              "RelativeToolTip": "Views\\Category\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T17:00:56.693Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -54,106 +47,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Detail.cshtml",
-              "DocumentMoniker": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Views\\Listing\\Detail.cshtml",
-              "RelativeDocumentMoniker": "Views\\Listing\\Detail.cshtml",
-              "ToolTip": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Views\\Listing\\Detail.cshtml",
-              "RelativeToolTip": "Views\\Listing\\Detail.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABEAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-23T20:20:29.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ListingController.cs",
-              "DocumentMoniker": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Controllers\\ListingController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ListingController.cs",
-              "ToolTip": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Controllers\\ListingController.cs",
-              "RelativeToolTip": "Controllers\\ListingController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "Controllers\\CategoryController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAowDIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T20:17:25.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAIwAcAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-23T20:14:31.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAIwIIAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-23T20:08:24.065Z",
+              "WhenOpened": "2025-12-24T16:55:44.697Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAIwEwAAAAFAAAAAAAAAA==",
+              "Title": "CategoryCreateVm.cs",
+              "DocumentMoniker": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Models\\CategoryCreateVm.cs",
+              "RelativeDocumentMoniker": "Models\\CategoryCreateVm.cs",
+              "ToolTip": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Models\\CategoryCreateVm.cs",
+              "RelativeToolTip": "Models\\CategoryCreateVm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T20:07:28.632Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T19:57:58.215Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SahibindenDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Data\\SahibindenDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\SahibindenDbContext.cs",
-              "ToolTip": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Data\\SahibindenDbContext.cs",
-              "RelativeToolTip": "Data\\SahibindenDbContext.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACAAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T19:57:04.808Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-23T19:47:16.519Z",
+              "WhenOpened": "2025-12-24T16:52:09.19Z",
               "EditorCaption": ""
             }
           ]

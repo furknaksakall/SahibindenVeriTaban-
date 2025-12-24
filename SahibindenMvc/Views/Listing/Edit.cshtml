@@ -1,0 +1,72 @@
+﻿@model SahibindenMvc.Models.ListingEditVm
+@{
+    ViewData["Title"] = "İlan Düzenle";
+    var categories = ViewBag.Categories as List<SahibindenMvc.Models.Category>;
+    var locations = ViewBag.Locations as List<SahibindenMvc.Models.Location>;
+}
+
+<h2>İlan Düzenle (Stored Procedure)</h2>
+
+<form method="post" style="max-width:700px; background:#fff; padding:16px; border:1px solid #ddd; border-radius:10px;">
+    <input asp-for="ListingId" type="hidden" />
+
+    <div style="margin-bottom:10px;">
+        <label>Kategori</label><br />
+        <select asp-for="CategoryId" style="padding:10px; width:100%;">
+            @foreach (var c in categories ?? new())
+            {
+                <option value="@c.CategoryId">@c.CategoryName</option>
+            }
+        </select>
+        <span asp-validation-for="CategoryId" style="color:red;"></span>
+    </div>
+
+    <div style="margin-bottom:10px;">
+        <label>Konum (LocationId)</label><br />
+        <select asp-for="LocationId" style="padding:10px; width:100%;">
+            @foreach (var l in locations ?? new())
+            {
+                <option value="@l.LocationId">@l.LocationName</option>
+            }
+        </select>
+        <span asp-validation-for="LocationId" style="color:red;"></span>
+    </div>
+
+    <div style="margin-bottom:10px;">
+        <label>Başlık</label><br />
+        <input asp-for="Title" style="padding:10px; width:100%;" />
+        <span asp-validation-for="Title" style="color:red;"></span>
+    </div>
+
+    <div style="margin-bottom:10px;">
+        <label>Açıklama</label><br />
+        <textarea asp-for="Description" rows="5" style="padding:10px; width:100%;"></textarea>
+        <span asp-validation-for="Description" style="color:red;"></span>
+    </div>
+
+    <div style="margin-bottom:10px;">
+        <label>Fiyat</label><br />
+        <input asp-for="Price" type="number" step="0.01" style="padding:10px; width:100%;" />
+        <span asp-validation-for="Price" style="color:red;"></span>
+    </div>
+
+    <div style="margin-bottom:10px;">
+        <label>Para Birimi</label><br />
+        <input asp-for="Currency" style="padding:10px; width:100%;" />
+    </div>
+
+    <div style="margin-bottom:10px;">
+        <label>
+            <input asp-for="IsActive" type="checkbox" />
+            Aktif
+        </label>
+    </div>
+
+    <button type="submit" style="padding:10px 14px; border:0; border-radius:8px; cursor:pointer;">
+        Güncelle
+    </button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -32,6 +32,12 @@ public partial class SahibindenDbContext : DbContext
 
     public virtual DbSet<VwListing> VwListings { get; set; }
 
+    // ✅ SP sonucu okumak için (TABLO DEĞİL)
+    public virtual DbSet<SpNewIdResult> SpNewIdResults { get; set; }
+
+    // ✅ Kategori ekleme SP sonucu okumak için (TABLO DEĞİL)
+    public virtual DbSet<SpCategoryIdResult> SpCategoryIdResults { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("Name=ConnectionStrings:SahibindenDb");
 
@@ -113,8 +119,19 @@ public partial class SahibindenDbContext : DbContext
         modelBuilder.Entity<VwListing>(entity =>
         {
             entity.ToView("vw_Listings");
-
             entity.Property(e => e.Currency).IsFixedLength();
+        });
+
+        // ✅ SpNewIdResult bir tablo değil -> KEYLESS
+        modelBuilder.Entity<SpNewIdResult>(entity =>
+        {
+            entity.HasNoKey();
+        });
+
+        // ✅ SpCategoryIdResult bir tablo değil -> KEYLESS
+        modelBuilder.Entity<SpCategoryIdResult>(entity =>
+        {
+            entity.HasNoKey();
         });
 
         OnModelCreatingPartial(modelBuilder);

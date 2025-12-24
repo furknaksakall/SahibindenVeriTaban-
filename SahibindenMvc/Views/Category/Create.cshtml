@@ -1,0 +1,39 @@
+﻿@model SahibindenMvc.Models.CategoryCreateVm
+@{
+    ViewData["Title"] = "Kategori Ekle";
+    var cats = ViewBag.Categories as List<SahibindenMvc.Models.Category>;
+}
+
+<h2>Kategori Ekle (Stored Procedure)</h2>
+
+<form method="post" style="max-width:650px; background:#fff; padding:16px; border:1px solid #ddd; border-radius:10px;">
+    <div style="margin-bottom:10px;">
+        <label>Üst Kategori (Parent)</label><br />
+        <select asp-for="ParentId" style="padding:10px; width:100%;">
+            <option value="">(Üst kategori yok)</option>
+            @foreach (var c in cats ?? new())
+            {
+                <option value="@c.CategoryId">@c.CategoryName</option>
+            }
+        </select>
+    </div>
+
+    <div style="margin-bottom:10px;">
+        <label>Kategori Adı</label><br />
+        <input asp-for="CategoryName" style="padding:10px; width:100%;" />
+        <span asp-validation-for="CategoryName" style="color:red;"></span>
+    </div>
+
+    <div style="margin-bottom:10px;">
+        <label>Sıra</label><br />
+        <input asp-for="SortOrder" type="number" style="padding:10px; width:100%;" />
+    </div>
+
+    <button type="submit" style="padding:10px 14px; border:0; border-radius:8px; cursor:pointer;">
+        Kaydet
+    </button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

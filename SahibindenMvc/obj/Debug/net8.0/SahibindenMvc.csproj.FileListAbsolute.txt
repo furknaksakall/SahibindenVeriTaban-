@@ -145,3 +145,4 @@ C:\Users\aksak\Desktop\VERİ PROJE\SahibindenMvc\obj\Debug\net8.0\refint\Sahibin
 C:\Users\aksak\Desktop\VERİ PROJE\SahibindenMvc\obj\Debug\net8.0\SahibindenMvc.pdb
 C:\Users\aksak\Desktop\VERİ PROJE\SahibindenMvc\obj\Debug\net8.0\SahibindenMvc.genruntimeconfig.cache
 C:\Users\aksak\Desktop\VERİ PROJE\SahibindenMvc\obj\Debug\net8.0\ref\SahibindenMvc.dll
+C:\Users\aksak\Desktop\VERİ PROJE\SahibindenMvc\obj\Debug\net8.0\SahibindenMvc.sourcelink.json

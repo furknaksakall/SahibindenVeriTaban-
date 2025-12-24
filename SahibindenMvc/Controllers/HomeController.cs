@@ -1,7 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using SahibindenMvc.Data;
 using SahibindenMvc.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace SahibindenMvc.Controllers
 {
@@ -17,25 +22,15 @@ namespace SahibindenMvc.Controllers
         // /?q=...&categoryId=...&cityId=...&districtId=...
         public async Task<IActionResult> Index(string? q, int? categoryId, int? cityId, int? districtId)
         {
-            // ✅ VIEW üzerinden sorgu (Include YOK)
-            var query = _db.VwListings.Where(x => x.IsActive);
+            // ✅ İlanları LINQ ile değil -> SP ile çekiyoruz
+            var pQ = new SqlParameter("@Q", (object?)q ?? DBNull.Value);
+            var pCategoryId = new SqlParameter("@CategoryId", (object?)categoryId ?? DBNull.Value);
+            var pCityId = new SqlParameter("@CityId", (object?)cityId ?? DBNull.Value);
+            var pDistrictId = new SqlParameter("@DistrictId", (object?)districtId ?? DBNull.Value);
 
-            if (!string.IsNullOrWhiteSpace(q))
-                query = query.Where(x => x.Title.Contains(q));
-
-            if (categoryId.HasValue)
-                query = query.Where(x => x.CategoryId == categoryId.Value);
-
-            // ✅ Konum filtresi: VIEW alanlarıyla
-            if (districtId.HasValue)
-                query = query.Where(x => x.DistrictId == districtId.Value);
-            else if (cityId.HasValue)
-                query = query.Where(x => x.CityId == cityId.Value);
-
-            // ✅ Tek seferde liste al (listings 1 kere tanımlanır)
-            var listings = await query
-                .OrderByDescending(x => x.CreatedAt)
-                .Take(50)
+            var listings = await _db.VwListings
+                .FromSqlRaw("EXEC dbo.sp_Listings_Filter @Q, @CategoryId, @CityId, @DistrictId",
+                    pQ, pCategoryId, pCityId, pDistrictId)
                 .ToListAsync();
 
             // Kategori ağacı (sol menü için)
