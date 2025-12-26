@@ -24,6 +24,8 @@ public partial class SahibindenDbContext : DbContext
 
     public virtual DbSet<ListingAttribute> ListingAttributes { get; set; }
 
+    public virtual DbSet<ListingLog> ListingLogs { get; set; }
+
     public virtual DbSet<ListingPhoto> ListingPhotos { get; set; }
 
     public virtual DbSet<Location> Locations { get; set; }
@@ -31,12 +33,6 @@ public partial class SahibindenDbContext : DbContext
     public virtual DbSet<User> Users { get; set; }
 
     public virtual DbSet<VwListing> VwListings { get; set; }
-
-    // ✅ SP sonucu okumak için (TABLO DEĞİL)
-    public virtual DbSet<SpNewIdResult> SpNewIdResults { get; set; }
-
-    // ✅ Kategori ekleme SP sonucu okumak için (TABLO DEĞİL)
-    public virtual DbSet<SpCategoryIdResult> SpCategoryIdResults { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("Name=ConnectionStrings:SahibindenDb");
@@ -54,12 +50,20 @@ public partial class SahibindenDbContext : DbContext
         {
             entity.HasKey(e => e.CategoryId).HasName("PK__Categori__19093A0B356BFF74");
 
+            entity.ToTable(tb => tb.HasTrigger("tr_Categories_BlockDeleteIfHasChildren"));
+
             entity.HasOne(d => d.Parent).WithMany(p => p.InverseParent).HasConstraintName("FK_Categories_Parent");
         });
 
         modelBuilder.Entity<Listing>(entity =>
         {
             entity.HasKey(e => e.ListingId).HasName("PK__Listings__BF3EBED024DDE0EF");
+
+            entity.ToTable(tb =>
+                {
+                    tb.HasTrigger("tr_Listings_LogUpdate");
+                    tb.HasTrigger("tr_Listings_ValidateNormalize");
+                });
 
             entity.Property(e => e.CreatedAt).HasDefaultValueSql("(sysdatetime())");
             entity.Property(e => e.Currency)
@@ -89,6 +93,13 @@ public partial class SahibindenDbContext : DbContext
             entity.HasOne(d => d.Listing).WithMany(p => p.ListingAttributes).HasConstraintName("FK_ListingAttrs_Listings");
         });
 
+        modelBuilder.Entity<ListingLog>(entity =>
+        {
+            entity.HasKey(e => e.LogId).HasName("PK__ListingL__5E54864813A26554");
+
+            entity.Property(e => e.LogDate).HasDefaultValueSql("(sysutcdatetime())");
+        });
+
         modelBuilder.Entity<ListingPhoto>(entity =>
         {
             entity.HasKey(e => e.PhotoId).HasName("PK__ListingP__21B7B5E2D8905420");
@@ -101,6 +112,8 @@ public partial class SahibindenDbContext : DbContext
         modelBuilder.Entity<Location>(entity =>
         {
             entity.HasKey(e => e.LocationId).HasName("PK__Location__E7FEA49707C1F1DC");
+
+            entity.ToTable(tb => tb.HasTrigger("tr_Locations_BlockDeleteIfHasChildrenOrListings"));
 
             entity.HasIndex(e => e.LocationName, "UX_Locations_City")
                 .IsUnique()
@@ -119,19 +132,8 @@ public partial class SahibindenDbContext : DbContext
         modelBuilder.Entity<VwListing>(entity =>
         {
             entity.ToView("vw_Listings");
+
             entity.Property(e => e.Currency).IsFixedLength();
-        });
-
-        // ✅ SpNewIdResult bir tablo değil -> KEYLESS
-        modelBuilder.Entity<SpNewIdResult>(entity =>
-        {
-            entity.HasNoKey();
-        });
-
-        // ✅ SpCategoryIdResult bir tablo değil -> KEYLESS
-        modelBuilder.Entity<SpCategoryIdResult>(entity =>
-        {
-            entity.HasNoKey();
         });
 
         OnModelCreatingPartial(modelBuilder);

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SahibindenMvc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4581f4766af25da329458ab67bbaa102cdd5ac1c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dcb9bd584c9344e93daf63eb5d94bd6178e7882b")]
 [assembly: System.Reflection.AssemblyProductAttribute("SahibindenMvc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SahibindenMvc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
