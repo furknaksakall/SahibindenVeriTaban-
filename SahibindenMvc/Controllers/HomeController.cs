@@ -28,10 +28,11 @@ namespace SahibindenMvc.Controllers
             var pCityId = new SqlParameter("@CityId", (object?)cityId ?? DBNull.Value);
             var pDistrictId = new SqlParameter("@DistrictId", (object?)districtId ?? DBNull.Value);
 
-            var listings = await _db.VwListings
+            var listings = await _db.Set<VwListingFilterResult>()
                 .FromSqlRaw("EXEC dbo.sp_Listings_Filter @Q, @CategoryId, @CityId, @DistrictId",
                     pQ, pCategoryId, pCityId, pDistrictId)
                 .ToListAsync();
+
 
             // Kategori ağacı (sol menü için)
             var allCats = await _db.Categories

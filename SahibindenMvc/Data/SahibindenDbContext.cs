@@ -60,10 +60,10 @@ public partial class SahibindenDbContext : DbContext
             entity.HasKey(e => e.ListingId).HasName("PK__Listings__BF3EBED024DDE0EF");
 
             entity.ToTable(tb =>
-                {
-                    tb.HasTrigger("tr_Listings_LogUpdate");
-                    tb.HasTrigger("tr_Listings_ValidateNormalize");
-                });
+            {
+                tb.HasTrigger("tr_Listings_LogUpdate");
+                tb.HasTrigger("tr_Listings_ValidateNormalize");
+            });
 
             entity.Property(e => e.CreatedAt).HasDefaultValueSql("(sysdatetime())");
             entity.Property(e => e.Currency)
@@ -132,8 +132,13 @@ public partial class SahibindenDbContext : DbContext
         modelBuilder.Entity<VwListing>(entity =>
         {
             entity.ToView("vw_Listings");
-
             entity.Property(e => e.Currency).IsFixedLength();
+        });
+
+        // ✅ SP sonucu/DTO okuma için KEYLESS mapping (TABLO/VIEW DEĞİL)
+        modelBuilder.Entity<VwListingFilterResult>(entity =>
+        {
+            entity.HasNoKey();
         });
 
         OnModelCreatingPartial(modelBuilder);

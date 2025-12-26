@@ -126,6 +126,7 @@ C:\Users\aksak\Desktop\VERİ PROJE\SahibindenMvc\obj\Debug\net8.0\SahibindenMvc.
 C:\Users\aksak\Desktop\VERİ PROJE\SahibindenMvc\obj\Debug\net8.0\SahibindenMvc.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\aksak\Desktop\VERİ PROJE\SahibindenMvc\obj\Debug\net8.0\SahibindenMvc.RazorAssemblyInfo.cache
 C:\Users\aksak\Desktop\VERİ PROJE\SahibindenMvc\obj\Debug\net8.0\SahibindenMvc.RazorAssemblyInfo.cs
+C:\Users\aksak\Desktop\VERİ PROJE\SahibindenMvc\obj\Debug\net8.0\SahibindenMvc.sourcelink.json
 C:\Users\aksak\Desktop\VERİ PROJE\SahibindenMvc\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\aksak\Desktop\VERİ PROJE\SahibindenMvc\obj\Debug\net8.0\scopedcss\bundle\SahibindenMvc.styles.css
 C:\Users\aksak\Desktop\VERİ PROJE\SahibindenMvc\obj\Debug\net8.0\scopedcss\projectbundle\SahibindenMvc.bundle.scp.css
@@ -145,4 +146,3 @@ C:\Users\aksak\Desktop\VERİ PROJE\SahibindenMvc\obj\Debug\net8.0\refint\Sahibin
 C:\Users\aksak\Desktop\VERİ PROJE\SahibindenMvc\obj\Debug\net8.0\SahibindenMvc.pdb
 C:\Users\aksak\Desktop\VERİ PROJE\SahibindenMvc\obj\Debug\net8.0\SahibindenMvc.genruntimeconfig.cache
 C:\Users\aksak\Desktop\VERİ PROJE\SahibindenMvc\obj\Debug\net8.0\ref\SahibindenMvc.dll
-C:\Users\aksak\Desktop\VERİ PROJE\SahibindenMvc\obj\Debug\net8.0\SahibindenMvc.sourcelink.json
