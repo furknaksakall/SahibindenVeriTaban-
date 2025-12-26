@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|c:\\users\\aksak\\desktop\\ver\u0130 proje\\sahibindenmvc\\models\\categorycreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|solutionrelative:models\\categorycreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|c:\\users\\aksak\\desktop\\ver\u0130 proje\\sahibindenmvc\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|solutionrelative:views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|c:\\users\\aksak\\desktop\\ver\u0130 proje\\sahibindenmvc\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C8FB619-4EF3-4EC1-9645-D9B401BB6D17}|SahibindenMvc.csproj|solutionrelative:controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,54 +9,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Views\\Category\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Category\\Create.cshtml",
-              "ToolTip": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Views\\Category\\Create.cshtml",
-              "RelativeToolTip": "Views\\Category\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAIwCcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-24T17:00:56.693Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CategoryController.cs",
-              "ToolTip": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "Controllers\\CategoryController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAowDIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T16:55:44.697Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CategoryCreateVm.cs",
-              "DocumentMoniker": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Models\\CategoryCreateVm.cs",
-              "RelativeDocumentMoniker": "Models\\CategoryCreateVm.cs",
-              "ToolTip": "C:\\Users\\aksak\\Desktop\\VER\u0130 PROJE\\SahibindenMvc\\Models\\CategoryCreateVm.cs",
-              "RelativeToolTip": "Models\\CategoryCreateVm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T16:52:09.19Z",
-              "EditorCaption": ""
             }
           ]
         },
